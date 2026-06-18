@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPD MBTI 통합 — 개인·크루·직무</title>
+<style>
+ :root{--ink:#1c1c1c;--muted:#6f6f6f;--line:#e6e6e6;--accent:#2f5fa0;--crew:#2f5fa0;--ppd:#c1672a;}
+ *{box-sizing:border-box;}
+ html,body{margin:0;background:#eceae6;color:var(--ink);
+   font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.55;}
+ .wrap{max-width:1040px;margin:26px auto;background:#fff;padding:44px 46px 40px;box-shadow:0 2px 28px rgba(0,0,0,.09);}
+ .eyebrow{font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin:0 0 8px;}
+ h1{font-size:27px;font-weight:800;margin:0 0 6px;}
+ .sub{font-size:14px;color:var(--muted);}
+ .stats{display:flex;gap:12px;margin:18px 0 0;flex-wrap:wrap;}
+ .stat{flex:1;min-width:120px;background:#faf8f4;border:1px solid #ece7df;border-radius:8px;padding:12px 14px;}
+ .stat b{display:block;font-size:22px;font-weight:800;} .stat span{font-size:12px;color:var(--muted);}
+ hr{border:0;height:1px;background:var(--line);margin:28px 0;}
+ h2{font-size:17px;font-weight:800;margin:30px 0 12px;padding-left:12px;border-left:4px solid var(--accent);}
+ .docs{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+ .doc{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:.15s;}
+ .doc:hover{border-color:var(--accent);background:#f7faff;}
+ .di{font-size:20px;} .dt{display:block;font-size:14.5px;font-weight:800;margin:4px 0 3px;}
+ .dd{display:block;font-size:12px;color:var(--muted);}
+ table{width:100%;border-collapse:collapse;font-size:13px;}
+ th,td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle;}
+ th{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:700;}
+ .c-name a{font-weight:700;color:var(--accent);text-decoration:none;} .c-name a:hover{text-decoration:underline;}
+ .cb{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:20px;}
+ .cb-c{background:var(--crew);color:#fff;} .cb-p{background:#fff;color:var(--ppd);border:1px solid var(--ppd);}
+ .c-fn{font-size:12px;color:#555;} .c-type{font-weight:800;letter-spacing:.04em;}
+ .c-tags{white-space:nowrap;}
+ .tg{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;border-radius:3px;font-size:10.5px;font-weight:800;margin-right:2px;}
+ .tg-strong{background:#1c1c1c;color:#fff;} .tg-clear{background:#dfe7f1;color:#2f5fa0;} .tg-flex{background:#f6e3d6;color:#c1672a;}
+ .c-note{font-size:11.5px;color:#666;}
+ .legend{font-size:11.5px;color:#888;margin:10px 0 0;display:flex;gap:14px;flex-wrap:wrap;}
+ .legend span{display:inline-flex;align-items:center;gap:5px;}
+ .sw{width:12px;height:12px;border-radius:3px;display:inline-block;}
+ .note{margin-top:24px;font-size:12px;color:#9a9a9a;background:#f7f7f6;border-radius:8px;padding:14px 16px;}
+ @media print{html,body{background:#fff;}.wrap{box-shadow:none;margin:0;max-width:none;padding:18px;}@page{margin:12mm;}
+  .tg,.cb,.sw{-webkit-print-color-adjust:exact;print-color-adjust:exact;} tr{break-inside:avoid;}}
+ @media (max-width:680px){.docs{grid-template-columns:1fr;}.wrap{padding:22px;}.c-fn,.c-note{display:none;}}
+</style></head><body><div class="wrap">
+ <p class="eyebrow">MBTI Form Gs · PPD 통합</p>
+ <h1>PPD MBTI 통합 — 개인 · 크루 · 직무</h1>
+ <p class="sub">PPD 본부 · MBTI Form Gs 검사 완료 23명 · 기준 2026.06</p>
+ <div class="stats">
+   <div class="stat"><b>23</b><span>검사 완료 인원</span></div>
+   <div class="stat"><b>14 · 9</b><span>UNF Crew · 그 외 본부</span></div>
+   <div class="stat"><b>12종</b><span>나타난 유형</span></div>
+   <div class="stat"><b>ISTJ ×4</b><span>가장 많은 유형</span></div>
+ </div>
+
+ <h2>그룹 분석 자료</h2>
+ <div class="docs"><a class="doc" href="mbti_crew_dashboard.html"><span class="di">📊</span><span class="dt">본부 전체 대시보드</span><span class="dd">본부 23명 유형 분포·지표 구성·기질·사람별 분명도 + 크루 기준 인사이트</span></a><a class="doc" href="mbti_team_worksheet.html"><span class="di">🧭</span><span class="dt">협업·소통 분석 시트</span><span class="dd">본부 23명 각자의 소통·문제해결·환경·협업역할 (점수 강도별 설명)</span></a><a class="doc" href="mbti_job_map.html"><span class="di">🗂️</span><span class="dt">직무 그룹별 일하는 방식 맵</span><span class="dd">8개 직무 그룹의 구성과 협업 포인트</span></a><a class="doc" href="mbti_crew_collab.html"><span class="di">🤝</span><span class="dt">UnF 크루 내부 협업 맵</span><span class="dd">크루 14명의 크로스펑션 핸드오프·협업</span></a><a class="doc" href="mbti_crew_guide.html"><span class="di">🎯</span><span class="dt">UnF 크루 운영 가이드</span><span class="dd">회식·워크샵·보고·피드백을 크루 성향에 맞게 (크루 14명 기준)</span></a></div>
+
+ <h2>전체 명단 — 개인 · 크루 · 직무 한눈에</h2>
+ <table>
+   <thead><tr><th>이름</th><th>크루</th><th>직무</th><th>유형</th><th>강도 (E/I·S/N·T/F·J/P)</th><th>특징</th></tr></thead>
+   <tbody><tr>
+      <td class="c-name"><a href="mbti_result_ra_satbyeol.html">라샛별</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">Membership PM</td>
+      <td class="c-type" style="color:#7a4b8c">ENTP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="외향 33">E</span><span class="tg tg-clear" title="직관 11">N</span><span class="tg tg-strong" title="사고 49">T</span><span class="tg tg-clear" title="인식 11">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_choi.html">최서현</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#c1672a">ESTP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="외향 45">E</span><span class="tg tg-strong" title="감각 63">S</span><span class="tg tg-flex" title="사고 7">t</span><span class="tg tg-strong" title="인식 39">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">S</b> 또렷 · 유동 t</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_ha_jihyeon.html">하지현</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#2f5fa0">ESTJ</td>
+      <td class="c-tags"><span class="tg tg-flex" title="외향 3">e</span><span class="tg tg-strong" title="감각 33">S</span><span class="tg tg-clear" title="사고 13">T</span><span class="tg tg-clear" title="판단 25">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">S</b> 또렷 · 유동 e</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_kim_minju.html">김민주</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#2f5fa0">ISFJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 41">I</span><span class="tg tg-clear" title="감각 23">S</span><span class="tg tg-flex" title="감정 1">f</span><span class="tg tg-strong" title="판단 49">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">J</b> 또렷 · 유동 f</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_ma_jiyeong.html">마지영</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#2f5fa0">ESTJ</td>
+      <td class="c-tags"><span class="tg tg-flex" title="외향 1">e</span><span class="tg tg-clear" title="감각 23">S</span><span class="tg tg-clear" title="사고 19">T</span><span class="tg tg-flex" title="판단 9">j</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">S</b> 또렷 · 유동 ej</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_park_jungin.html">박정인</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#2f5fa0">ISTJ</td>
+      <td class="c-tags"><span class="tg tg-clear" title="내향 23">I</span><span class="tg tg-strong" title="감각 51">S</span><span class="tg tg-strong" title="사고 45">T</span><span class="tg tg-strong" title="판단 47">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">S</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_jang_yunjeong.html">장윤정</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#2e8b57">ENFJ</td>
+      <td class="c-tags"><span class="tg tg-clear" title="외향 15">E</span><span class="tg tg-clear" title="직관 13">N</span><span class="tg tg-clear" title="감정 19">F</span><span class="tg tg-clear" title="판단 13">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">F</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_choi_seoim.html">최서임</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">PM</td>
+      <td class="c-type" style="color:#c1672a">ESTP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="외향 33">E</span><span class="tg tg-clear" title="감각 13">S</span><span class="tg tg-flex" title="사고 7">t</span><span class="tg tg-strong" title="인식 41">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">P</b> 또렷 · 유동 t</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_park_eunji.html">박은지</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">UX</td>
+      <td class="c-type" style="color:#2f5fa0">ISTJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 31">I</span><span class="tg tg-strong" title="감각 45">S</span><span class="tg tg-flex" title="사고 1">t</span><span class="tg tg-flex" title="판단 9">j</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">S</b> 또렷 · 유동 tj</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_seo_janghyeok.html">서장혁</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">FE</td>
+      <td class="c-type" style="color:#2e8b57">ENFJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="외향 31">E</span><span class="tg tg-flex" title="직관 7">n</span><span class="tg tg-flex" title="감정 9">f</span><span class="tg tg-clear" title="판단 25">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">E</b> 또렷 · 유동 nf</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_lee_sujin.html">이수진</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">FE</td>
+      <td class="c-type" style="color:#7a4b8c">INTJ</td>
+      <td class="c-tags"><span class="tg tg-flex" title="내향 3">i</span><span class="tg tg-clear" title="직관 13">N</span><span class="tg tg-clear" title="사고 27">T</span><span class="tg tg-clear" title="판단 15">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷 · 유동 i</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_choi_myeonghee.html">최명희</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">FE</td>
+      <td class="c-type" style="color:#c1672a">ISFP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 33">I</span><span class="tg tg-clear" title="감각 29">S</span><span class="tg tg-flex" title="감정 1">f</span><span class="tg tg-clear" title="인식 17">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">I</b> 또렷 · 유동 f</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_park_hyeonmin.html">박현민</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">BE</td>
+      <td class="c-type" style="color:#2f5fa0">ISTJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 31">I</span><span class="tg tg-clear" title="감각 21">S</span><span class="tg tg-strong" title="사고 65">T</span><span class="tg tg-strong" title="판단 49">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_lee_doyeon.html">이도연</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">BE</td>
+      <td class="c-type" style="color:#2f5fa0">ESTJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="외향 51">E</span><span class="tg tg-clear" title="감각 23">S</span><span class="tg tg-flex" title="사고 3">t</span><span class="tg tg-clear" title="판단 13">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">E</b> 또렷 · 유동 t</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_lee_junho.html">이준호</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">BE</td>
+      <td class="c-type" style="color:#2e8b57">INFJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 47">I</span><span class="tg tg-clear" title="직관 21">N</span><span class="tg tg-clear" title="감정 19">F</span><span class="tg tg-clear" title="판단 27">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">I</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_moon_junghyeon.html">문중현</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">DE</td>
+      <td class="c-type" style="color:#c1672a">ISTP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 43">I</span><span class="tg tg-clear" title="감각 15">S</span><span class="tg tg-strong" title="사고 41">T</span><span class="tg tg-strong" title="인식 45">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">P</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_lee_saeyan.html">이새얀</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">DE</td>
+      <td class="c-type" style="color:#2f5fa0">ESTJ</td>
+      <td class="c-tags"><span class="tg tg-clear" title="외향 21">E</span><span class="tg tg-strong" title="감각 39">S</span><span class="tg tg-strong" title="사고 53">T</span><span class="tg tg-clear" title="판단 25">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_kwak_heeju.html">곽희주</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">QA</td>
+      <td class="c-type" style="color:#7a4b8c">INTP</td>
+      <td class="c-tags"><span class="tg tg-flex" title="내향 1">i</span><span class="tg tg-flex" title="직관 3">n</span><span class="tg tg-strong" title="사고 33">T</span><span class="tg tg-clear" title="인식 11">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷 · 유동 in</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_ji_ugil.html">지욱일</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">QA</td>
+      <td class="c-type" style="color:#2f5fa0">ISTJ</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 51">I</span><span class="tg tg-strong" title="감각 41">S</span><span class="tg tg-clear" title="사고 29">T</span><span class="tg tg-strong" title="판단 53">J</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">J</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_kim_bomi.html">김보미</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">DA</td>
+      <td class="c-type" style="color:#c1672a">ESTP</td>
+      <td class="c-tags"><span class="tg tg-clear" title="외향 25">E</span><span class="tg tg-clear" title="감각 25">S</span><span class="tg tg-strong" title="사고 41">T</span><span class="tg tg-strong" title="인식 51">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">P</b> 또렷</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_kim_taehyeok.html">김태혁</a></td>
+      <td><span class="cb cb-c">UNF</span></td>
+      <td class="c-fn">DA</td>
+      <td class="c-type" style="color:#c1672a">ISTP</td>
+      <td class="c-tags"><span class="tg tg-flex" title="내향 5">i</span><span class="tg tg-flex" title="감각 7">s</span><span class="tg tg-strong" title="사고 49">T</span><span class="tg tg-flex" title="인식 9">p</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">T</b> 또렷 · 유동 isp</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_oh_gaeun.html">오가은</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">DA</td>
+      <td class="c-type" style="color:#7a4b8c">INTP</td>
+      <td class="c-tags"><span class="tg tg-flex" title="내향 9">i</span><span class="tg tg-clear" title="직관 11">N</span><span class="tg tg-flex" title="사고 3">t</span><span class="tg tg-clear" title="인식 17">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">P</b> 또렷 · 유동 it</td>
+    </tr><tr>
+      <td class="c-name"><a href="mbti_result_jeon_yeongran.html">전영란</a></td>
+      <td><span class="cb cb-p">본부</span></td>
+      <td class="c-fn">DA</td>
+      <td class="c-type" style="color:#2e8b57">INFP</td>
+      <td class="c-tags"><span class="tg tg-strong" title="내향 43">I</span><span class="tg tg-strong" title="직관 37">N</span><span class="tg tg-clear" title="감정 19">F</span><span class="tg tg-strong" title="인식 49">P</span></td>
+      <td class="c-note"><b style="color:#1c1c1c">P</b> 또렷</td>
+    </tr></tbody>
+ </table>
+ <div class="legend">
+   <span><span class="cb cb-c">UNF</span> User &amp; Fan Crew</span>
+   <span><span class="cb cb-p">본부</span> 그 외 PPD 크루</span>
+   <span><span class="sw" style="background:#1c1c1c"></span>아주 뚜렷</span>
+   <span><span class="sw" style="background:#dfe7f1"></span>뚜렷</span>
+   <span><span class="sw" style="background:#f6e3d6"></span>유동적</span>
+ </div>
+ <p style="font-size:12px;color:#777;margin:10px 0 0;">이름을 누르면 개인 상세 보고서로 연결돼요(파일을 같은 폴더에 두면 작동). 강도 칸에 마우스를 올리면 환산점수가 보여요.</p>
+
+ <div class="note">※ 장운수 님(DA)은 현재 검사 미실시로, 본 보고서에는 포함되지 않았어요(검사 완료 시 추가 가능). · MBTI는 선호 경향을 보는 자기이해·소통 도구로, 채용·평가·직무 배치의 단독 근거로 쓰는 건 적절치 않아요.</div>
+</div></body></html>

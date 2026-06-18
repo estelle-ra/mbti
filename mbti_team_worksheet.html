@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User & Fan Crew + PPD · MBTI 협업·소통 분석</title>
+<style>
+ :root{--ink:#1c1c1c;--muted:#6f6f6f;--line:#e6e6e6;--accent:#2f5fa0;--crew:#2f5fa0;--ppd:#c1672a;}
+ *{box-sizing:border-box;}
+ html,body{margin:0;background:#eceae6;color:var(--ink);
+   font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.6;}
+ .wrap{max-width:1000px;margin:26px auto;background:#fff;padding:44px 48px 40px;box-shadow:0 2px 28px rgba(0,0,0,.09);}
+ .eyebrow{font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin:0 0 8px;}
+ h1{font-size:26px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em;}
+ .sub{font-size:14px;color:var(--muted);margin:0 0 4px;}
+ .scope{margin:18px 0 0;padding:16px 18px;background:#f4f7fb;border:1px solid #dbe6f2;border-radius:8px;font-size:13px;}
+ .scope b{font-weight:800;}
+ hr{border:0;height:1px;background:var(--line);margin:26px 0;}
+ h2{font-size:17px;font-weight:800;margin:30px 0 6px;padding-left:12px;border-left:4px solid var(--accent);}
+ .axis-key{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 4px;}
+ .ak{background:#fafafa;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;}
+ .ak b{display:block;font-size:13px;margin-bottom:2px;} .ak span{color:var(--muted);}
+ .legend2{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#555;margin:12px 0 0;}
+ .lg{display:inline-flex;align-items:center;gap:6px;}
+ .sw{width:12px;height:12px;border-radius:3px;display:inline-block;}
+ .grp{font-size:13px;font-weight:800;letter-spacing:.04em;margin:24px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line);}
+ .prow{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:10px 0;}
+ .phead{display:flex;align-items:center;gap:10px;margin-bottom:9px;flex-wrap:wrap;}
+ .pn{font-size:15px;font-weight:800;} .pt{font-size:13px;font-weight:800;letter-spacing:.06em;}
+ .tags{display:flex;gap:4px;margin-left:auto;}
+ .tg{display:inline-flex;flex-direction:column;align-items:center;width:30px;border-radius:5px;padding:2px 0;
+   font-weight:800;font-size:13px;line-height:1.05;}
+ .tg i{font-style:normal;font-size:9px;font-weight:600;opacity:.8;}
+ .tg-strong{background:#1c1c1c;color:#fff;}
+ .tg-clear{background:#dfe7f1;color:#2f5fa0;}
+ .tg-flex{background:#f6e3d6;color:#c1672a;}
+ .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+ .pcell{font-size:12.5px;color:#333;}
+ .pcell .k{display:inline-block;min-width:64px;font-weight:800;color:var(--accent);margin-right:6px;}
+ .note{margin-top:26px;font-size:12px;color:#9a9a9a;background:#f7f7f6;border-radius:8px;padding:14px 16px;}
+ @media print{html,body{background:#fff;}.wrap{box-shadow:none;margin:0;max-width:none;padding:18px;}
+   @page{margin:12mm;} .prow{break-inside:avoid;}
+   .tg-strong,.tg-clear,.tg-flex,.sw{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+ @media (max-width:680px){.pgrid,.axis-key{grid-template-columns:1fr;}.wrap{padding:24px;}}
+</style></head><body><div class="wrap">
+ <p class="eyebrow">MBTI Form Gs · 협업·소통 분석</p>
+ <h1>일하는 방식으로 본 우리 본부</h1>
+ <p class="sub">User &amp; Fan Crew + PPD 본부 · 23명</p>
+ <div class="scope">
+   이 시트는 MBTI 검사 결과를 바탕으로 각자의 <b>① 소통 방식 · ② 문제해결 접근 · ③ 편안한 업무 환경 · ④ 협업 역할</b>을 정리한 거예요.
+   같은 유형이라도 <b>각 지표가 얼마나 뚜렷한지(점수 강도)</b>에 따라 설명이 달라지도록 했어요. 서로의 일하는 방식을 이해하고 협업을 매끄럽게 하는 데 활용해 주세요.
+ </div>
+ <h2>읽는 법</h2>
+ <div class="axis-key">
+   <div class="ak"><b>소통 방식</b><span>외향/내향 + 사고/감정</span></div>
+   <div class="ak"><b>문제해결 접근</b><span>감각/직관 + 사고/감정</span></div>
+   <div class="ak"><b>편안한 환경</b><span>판단/인식 + 외향/내향</span></div>
+   <div class="ak"><b>협업 역할</b><span>기질(SJ·SP·NT·NF)</span></div>
+ </div>
+ <div class="legend2">
+   <span class="lg"><span class="sw" style="background:#1c1c1c"></span><b>아주 뚜렷</b> — 그 성향이 강하게 나타남</span>
+   <span class="lg"><span class="sw" style="background:#dfe7f1"></span><b>뚜렷</b> — 분명한 선호</span>
+   <span class="lg"><span class="sw" style="background:#f6e3d6"></span><b>유동적</b> — 상황 따라 양쪽을 오감</span>
+ </div>
+ <p style="font-size:12px;color:#777;margin:8px 0 0;">이름 오른쪽 네 칸은 E/I·S/N·T/F·J/P 순서이고, 아래 숫자는 그 선호의 뚜렷한 정도예요.</p>
+ <hr>
+ <div class="grp" style="color:var(--crew)">User &amp; Fan Crew (14명)</div>
+ <div class="prow">
+          <div class="phead"><span class="pn">곽희주</span><span class="pt" style="color:#7a4b8c">INTP</span>
+            <span class="tags"><span class="tg tg-flex">i<i>1</i></span><span class="tg tg-flex">n<i>3</i></span><span class="tg tg-strong">T<i>33</i></span><span class="tg tg-clear">P<i>11</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 다듬어 말하는 쪽입니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>큰 그림과 사실 디테일을 둘 다 보되 약간 가능성 쪽에서 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>유연하게 열려 있고 상황에 맞춰 조정할 수 있을 때 편안하며, 집중과 교류를 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>구조와 전략을 설계하고 ‘왜·어떻게’를 파고드는 ‘분석’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">김보미</span><span class="pt" style="color:#c1672a">ESTP</span>
+            <span class="tags"><span class="tg tg-clear">E<i>25</i></span><span class="tg tg-clear">S<i>25</i></span><span class="tg tg-strong">T<i>41</i></span><span class="tg tg-strong">P<i>51</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>말하며 생각을 정리하고 의견을 활발히 주고받는 편입니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>틀에 매이지 않고 유연하게 열려 즉흥적으로 움직일 수 있을 때 편안하며, 협업과 교류가 있는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">김태혁</span><span class="pt" style="color:#c1672a">ISTP</span>
+            <span class="tags"><span class="tg tg-flex">i<i>5</i></span><span class="tg tg-flex">s<i>7</i></span><span class="tg tg-strong">T<i>49</i></span><span class="tg tg-flex">p<i>9</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 다듬어 말하는 쪽입니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>사실 디테일과 큰 그림을 둘 다 보되 약간 사실 쪽에서 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>즉흥과 구조를 둘 다 편해하되 약간 유연할 때 편안하며, 집중과 교류를 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">라샛별</span><span class="pt" style="color:#7a4b8c">ENTP</span>
+            <span class="tags"><span class="tg tg-strong">E<i>33</i></span><span class="tg tg-clear">N<i>11</i></span><span class="tg tg-strong">T<i>49</i></span><span class="tg tg-clear">P<i>11</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>매우 활발하게 말하며 생각을 정리하고 의견을 적극적으로 주고받습니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>전체 맥락과 가능성을 먼저 보고 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>유연하게 열려 있고 상황에 맞춰 조정할 수 있을 때 편안하며, 사람들과 활발히 부대끼며 자극이 오가는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>구조와 전략을 설계하고 ‘왜·어떻게’를 파고드는 ‘분석’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">문중현</span><span class="pt" style="color:#c1672a">ISTP</span>
+            <span class="tags"><span class="tg tg-strong">I<i>43</i></span><span class="tg tg-clear">S<i>15</i></span><span class="tg tg-strong">T<i>41</i></span><span class="tg tg-strong">P<i>45</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>틀에 매이지 않고 유연하게 열려 즉흥적으로 움직일 수 있을 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">박은지</span><span class="pt" style="color:#2f5fa0">ISTJ</span>
+            <span class="tags"><span class="tg tg-strong">I<i>31</i></span><span class="tg tg-strong">S<i>45</i></span><span class="tg tg-flex">t<i>1</i></span><span class="tg tg-flex">j<i>9</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 논리와 공감을 함께 쓰되 약간 논리 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 논리와 사람 영향을 거의 반반으로 보되 약간 논리 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>구조와 즉흥을 둘 다 편해하되 약간 계획이 있을 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">박현민</span><span class="pt" style="color:#2f5fa0">ISTJ</span>
+            <span class="tags"><span class="tg tg-strong">I<i>31</i></span><span class="tg tg-clear">S<i>21</i></span><span class="tg tg-strong">T<i>65</i></span><span class="tg tg-strong">J<i>49</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>명확한 계획·마감·정리된 구조가 확실할 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">서장혁</span><span class="pt" style="color:#2e8b57">ENFJ</span>
+            <span class="tags"><span class="tg tg-strong">E<i>31</i></span><span class="tg tg-flex">n<i>7</i></span><span class="tg tg-flex">f<i>9</i></span><span class="tg tg-clear">J<i>25</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>매우 활발하게 말하며 생각을 정리하고 의견을 적극적으로 주고받습니다. 공감과 논리를 함께 쓰되 약간 공감 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>큰 그림과 사실 디테일을 둘 다 보되 약간 가능성 쪽에서 접근하고, 사람 영향과 논리를 거의 반반으로 보되 약간 사람 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 사람들과 활발히 부대끼며 자극이 오가는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>의미와 사람을 연결하고 함께 일하는 사람들의 동기·분위기를 살리는 ‘사람’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">이도연</span><span class="pt" style="color:#2f5fa0">ESTJ</span>
+            <span class="tags"><span class="tg tg-strong">E<i>51</i></span><span class="tg tg-clear">S<i>23</i></span><span class="tg tg-flex">t<i>3</i></span><span class="tg tg-clear">J<i>13</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>매우 활발하게 말하며 생각을 정리하고 의견을 적극적으로 주고받습니다. 논리와 공감을 함께 쓰되 약간 논리 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 논리와 사람 영향을 거의 반반으로 보되 약간 논리 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 사람들과 활발히 부대끼며 자극이 오가는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">이수진</span><span class="pt" style="color:#7a4b8c">INTJ</span>
+            <span class="tags"><span class="tg tg-flex">i<i>3</i></span><span class="tg tg-clear">N<i>13</i></span><span class="tg tg-clear">T<i>27</i></span><span class="tg tg-clear">J<i>15</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 다듬어 말하는 쪽입니다. 논리 중심의 명확한 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>전체 맥락과 가능성을 먼저 보고 접근하고, 주로 논리·효율을 기준으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 집중과 교류를 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>구조와 전략을 설계하고 ‘왜·어떻게’를 파고드는 ‘분석’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">이준호</span><span class="pt" style="color:#2e8b57">INFJ</span>
+            <span class="tags"><span class="tg tg-strong">I<i>47</i></span><span class="tg tg-clear">N<i>21</i></span><span class="tg tg-clear">F<i>19</i></span><span class="tg tg-clear">J<i>27</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 관계와 감정을 배려하는 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>전체 맥락과 가능성을 먼저 보고 접근하고, 사람에 대한 영향을 중요하게 고려해 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>의미와 사람을 연결하고 함께 일하는 사람들의 동기·분위기를 살리는 ‘사람’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">최명희</span><span class="pt" style="color:#c1672a">ISFP</span>
+            <span class="tags"><span class="tg tg-strong">I<i>33</i></span><span class="tg tg-clear">S<i>29</i></span><span class="tg tg-flex">f<i>1</i></span><span class="tg tg-clear">P<i>17</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 공감과 논리를 함께 쓰되 약간 공감 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 사람 영향과 논리를 거의 반반으로 보되 약간 사람 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>유연하게 열려 있고 상황에 맞춰 조정할 수 있을 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">최서현</span><span class="pt" style="color:#c1672a">ESTP</span>
+            <span class="tags"><span class="tg tg-strong">E<i>45</i></span><span class="tg tg-strong">S<i>63</i></span><span class="tg tg-flex">t<i>7</i></span><span class="tg tg-strong">P<i>39</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>매우 활발하게 말하며 생각을 정리하고 의견을 적극적으로 주고받습니다. 논리와 공감을 함께 쓰되 약간 논리 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 논리와 사람 영향을 거의 반반으로 보되 약간 논리 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>틀에 매이지 않고 유연하게 열려 즉흥적으로 움직일 수 있을 때 편안하며, 사람들과 활발히 부대끼며 자극이 오가는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">하지현</span><span class="pt" style="color:#2f5fa0">ESTJ</span>
+            <span class="tags"><span class="tg tg-flex">e<i>3</i></span><span class="tg tg-strong">S<i>33</i></span><span class="tg tg-clear">T<i>13</i></span><span class="tg tg-clear">J<i>25</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 말로 풀어내는 쪽입니다. 논리 중심의 명확한 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 주로 논리·효율을 기준으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 교류와 집중을 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div>
+ <div class="grp" style="color:var(--ppd)">PPD 본부 (9명)</div>
+ <div class="prow">
+          <div class="phead"><span class="pn">김민주</span><span class="pt" style="color:#2f5fa0">ISFJ</span>
+            <span class="tags"><span class="tg tg-strong">I<i>41</i></span><span class="tg tg-clear">S<i>23</i></span><span class="tg tg-flex">f<i>1</i></span><span class="tg tg-strong">J<i>49</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 공감과 논리를 함께 쓰되 약간 공감 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 사람 영향과 논리를 거의 반반으로 보되 약간 사람 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>명확한 계획·마감·정리된 구조가 확실할 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">마지영</span><span class="pt" style="color:#2f5fa0">ESTJ</span>
+            <span class="tags"><span class="tg tg-flex">e<i>1</i></span><span class="tg tg-clear">S<i>23</i></span><span class="tg tg-clear">T<i>19</i></span><span class="tg tg-flex">j<i>9</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 말로 풀어내는 쪽입니다. 논리 중심의 명확한 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 주로 논리·효율을 기준으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>구조와 즉흥을 둘 다 편해하되 약간 계획이 있을 때 편안하며, 교류와 집중을 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">박정인</span><span class="pt" style="color:#2f5fa0">ISTJ</span>
+            <span class="tags"><span class="tg tg-clear">I<i>23</i></span><span class="tg tg-strong">S<i>51</i></span><span class="tg tg-strong">T<i>45</i></span><span class="tg tg-strong">J<i>47</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>생각을 정리한 뒤 차분히 말하는 편입니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>명확한 계획·마감·정리된 구조가 확실할 때 편안하며, 집중할 수 있는 차분한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">오가은</span><span class="pt" style="color:#7a4b8c">INTP</span>
+            <span class="tags"><span class="tg tg-flex">i<i>9</i></span><span class="tg tg-clear">N<i>11</i></span><span class="tg tg-flex">t<i>3</i></span><span class="tg tg-clear">P<i>17</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>혼자 정리하는 시간과 함께 떠드는 시간을 둘 다 쓰되, 약간 다듬어 말하는 쪽입니다. 논리와 공감을 함께 쓰되 약간 논리 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>전체 맥락과 가능성을 먼저 보고 접근하고, 논리와 사람 영향을 거의 반반으로 보되 약간 논리 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>유연하게 열려 있고 상황에 맞춰 조정할 수 있을 때 편안하며, 집중과 교류를 둘 다 편해하는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>구조와 전략을 설계하고 ‘왜·어떻게’를 파고드는 ‘분석’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">이새얀</span><span class="pt" style="color:#2f5fa0">ESTJ</span>
+            <span class="tags"><span class="tg tg-clear">E<i>21</i></span><span class="tg tg-strong">S<i>39</i></span><span class="tg tg-strong">T<i>53</i></span><span class="tg tg-clear">J<i>25</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>말하며 생각을 정리하고 의견을 활발히 주고받는 편입니다. 논리적이고 단도직입적인 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 철저히 객관적 기준과 효율로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 협업과 교류가 있는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">장윤정</span><span class="pt" style="color:#2e8b57">ENFJ</span>
+            <span class="tags"><span class="tg tg-clear">E<i>15</i></span><span class="tg tg-clear">N<i>13</i></span><span class="tg tg-clear">F<i>19</i></span><span class="tg tg-clear">J<i>13</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>말하며 생각을 정리하고 의견을 활발히 주고받는 편입니다. 관계와 감정을 배려하는 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>전체 맥락과 가능성을 먼저 보고 접근하고, 사람에 대한 영향을 중요하게 고려해 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>계획과 마감, 정리된 구조가 있을 때 편안하며, 협업과 교류가 있는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>의미와 사람을 연결하고 함께 일하는 사람들의 동기·분위기를 살리는 ‘사람’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">전영란</span><span class="pt" style="color:#2e8b57">INFP</span>
+            <span class="tags"><span class="tg tg-strong">I<i>43</i></span><span class="tg tg-strong">N<i>37</i></span><span class="tg tg-clear">F<i>19</i></span><span class="tg tg-strong">P<i>49</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 관계와 감정을 배려하는 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>큰 그림과 가능성·연결고리를 폭넓게 먼저 그리며 접근하고, 사람에 대한 영향을 중요하게 고려해 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>틀에 매이지 않고 유연하게 열려 즉흥적으로 움직일 수 있을 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>의미와 사람을 연결하고 함께 일하는 사람들의 동기·분위기를 살리는 ‘사람’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">지욱일</span><span class="pt" style="color:#2f5fa0">ISTJ</span>
+            <span class="tags"><span class="tg tg-strong">I<i>51</i></span><span class="tg tg-strong">S<i>41</i></span><span class="tg tg-clear">T<i>29</i></span><span class="tg tg-strong">J<i>53</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>충분히 생각을 정리한 뒤 핵심만 정제해서 말하는 경향이 강합니다. 논리 중심의 명확한 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>검증된 사실과 구체적 데이터에 철저히 근거해 단계적으로 접근하고, 주로 논리·효율을 기준으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>명확한 계획·마감·정리된 구조가 확실할 때 편안하며, 방해 없이 깊이 몰입할 수 있는 조용한 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>맡은 일을 책임지고 끝까지 완수하는 ‘체계와 안정’의 축</div>
+          </div>
+        </div><div class="prow">
+          <div class="phead"><span class="pn">최서임</span><span class="pt" style="color:#c1672a">ESTP</span>
+            <span class="tags"><span class="tg tg-strong">E<i>33</i></span><span class="tg tg-clear">S<i>13</i></span><span class="tg tg-flex">t<i>7</i></span><span class="tg tg-strong">P<i>41</i></span></span></div>
+          <div class="pgrid">
+            <div class="pcell"><span class="k">소통</span>매우 활발하게 말하며 생각을 정리하고 의견을 적극적으로 주고받습니다. 논리와 공감을 함께 쓰되 약간 논리 쪽 톤.</div>
+            <div class="pcell"><span class="k">문제해결</span>구체적 사실과 실제 경험에서 출발해 단계적으로 접근하고, 논리와 사람 영향을 거의 반반으로 보되 약간 논리 쪽으로 결정합니다</div>
+            <div class="pcell"><span class="k">편안한 환경</span>틀에 매이지 않고 유연하게 열려 즉흥적으로 움직일 수 있을 때 편안하며, 사람들과 활발히 부대끼며 자극이 오가는 환경을 선호합니다</div>
+            <div class="pcell"><span class="k">협업 역할</span>현장에서 빠르게 판단하고 즉시 실행하는 ‘변수 대응’의 축</div>
+          </div>
+        </div>
+ <div class="note">※ MBTI는 ‘선호 경향’을 보는 자기이해·소통 도구예요. 같은 유형 안에도 사람은 매우 다양하며, 채용·평가·직무 배치의 단독 근거로 쓰는 건 적절치 않아요.</div>
+</div></body></html>

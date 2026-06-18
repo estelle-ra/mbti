@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPD MBTI 보고서</title>
+<style>
+ :root{--ink:#1c1c1c;--muted:#6f6f6f;--accent:#2f5fa0;}
+ *{box-sizing:border-box;}
+ html,body{margin:0;height:100%;background:#eceae6;color:var(--ink);
+   font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;}
+ .center{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
+ .card{background:#fff;max-width:380px;width:100%;border-radius:16px;padding:40px 34px;
+   box-shadow:0 4px 30px rgba(0,0,0,.10);text-align:center;}
+ .lock{font-size:34px;margin-bottom:6px;}
+ h1{font-size:19px;font-weight:800;margin:6px 0 4px;}
+ p.sub{font-size:13px;color:var(--muted);margin:0 0 22px;line-height:1.5;}
+ input{width:100%;padding:13px 14px;font-size:15px;border:1px solid #d8d8d8;border-radius:10px;
+   text-align:center;letter-spacing:.04em;outline:none;transition:.15s;}
+ input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,95,160,.12);}
+ button{width:100%;margin-top:12px;padding:13px;font-size:15px;font-weight:700;color:#fff;
+   background:var(--accent);border:0;border-radius:10px;cursor:pointer;transition:.15s;}
+ button:hover{background:#264e85;}
+ .err{color:#c0392b;font-size:13px;margin-top:12px;min-height:18px;font-weight:600;}
+ .foot{font-size:11px;color:#aaa;margin-top:20px;line-height:1.5;}
+</style></head>
+<body>
+<div class="center">
+  <div class="card">
+    <div class="lock">&#128274;</div>
+    <h1>PPD 본부 &middot; MBTI 보고서</h1>
+    <p class="sub">내부 공유 자료예요.<br>입장 비밀번호를 입력해 주세요.</p>
+    <input id="pw" type="password" placeholder="비밀번호" autocomplete="off" autofocus />
+    <button id="go">들어가기</button>
+    <div class="err" id="err"></div>
+    <p class="foot">사내 구성원 간 참고용 자료입니다.<br>외부 공유를 삼가 주세요.</p>
+  </div>
+</div>
+<script>
+  var TARGET = "hub.html";
+  // 비밀번호 SHA-256 해시 (원문 미포함). 기본 비번: unf2026
+  var PW_HASH = "120c04f177b0356a705428e59331d2106f2750a1fea6b9102675f8d81a19606f";
+  async function sha256(str){
+    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+  }
+  async function check(){
+    var v = document.getElementById("pw").value.trim();
+    var err = document.getElementById("err");
+    if(!v){ err.textContent="비밀번호를 입력해 주세요."; return; }
+    var h = await sha256(v);
+    if(h === PW_HASH){ err.textContent=""; location.href = TARGET; }
+    else { err.textContent="비밀번호가 올바르지 않아요."; document.getElementById("pw").select(); }
+  }
+  document.getElementById("go").addEventListener("click", check);
+  document.getElementById("pw").addEventListener("keydown", function(e){ if(e.key==="Enter") check(); });
+</script>
+</body></html>

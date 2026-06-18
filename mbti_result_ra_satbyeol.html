@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>라샛별 님 MBTI 결과 해석</title>
+<style>
+  :root{
+    --ink:#1c1c1c; --muted:#6f6f6f; --line:#e4e4e4;
+    --accent:#2f5fa0;
+    --e:#2e8b57; --s:#c1672a; --t:#2f5fa0; --p:#7a4b8c;
+    --paper:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#f3f3f1;color:var(--ink);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.7;}
+  .sheet{max-width:760px;margin:28px auto;background:var(--paper);padding:54px 56px 48px;
+    box-shadow:0 2px 24px rgba(0,0,0,.08);}
+  .eyebrow{font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:0 0 10px;}
+  h1{font-size:30px;font-weight:800;margin:0 0 4px;letter-spacing:-.01em;}
+  h1 .type{color:var(--accent);}
+  .lede{font-size:15px;color:var(--muted);margin:6px 0 30px;}
+  .rule{height:1px;background:var(--line);border:0;margin:0 0 30px;}
+  .profile{margin:0 0 36px;}
+  .prow{display:flex;align-items:center;gap:12px;margin:9px 0;font-size:13px;}
+  .pleft{width:96px;text-align:right;color:var(--muted);font-weight:600;}
+  .pright{width:96px;color:var(--muted);font-weight:600;}
+  .pleft.on,.pright.on{color:var(--ink);font-weight:800;}
+  .track{flex:1;height:22px;position:relative;background:#f4f4f2;border-radius:3px;}
+  .mid{position:absolute;left:50%;top:-4px;bottom:-4px;width:1.5px;background:#bdbdbd;}
+  .bar{position:absolute;top:0;height:22px;border-radius:3px;min-width:3px;}
+  .bar.left{right:50%;}
+  .bar.right{left:50%;}
+  .pcap{font-size:11.5px;color:var(--muted);text-align:center;margin:14px 0 0;}
+  h2{font-size:18px;font-weight:800;margin:34px 0 8px;padding-left:14px;border-left:4px solid var(--accent);}
+  p{font-size:14.5px;margin:8px 0;}
+  strong{font-weight:700;}
+  .pref{margin:20px 0;padding-bottom:18px;border-bottom:1px solid var(--line);}
+  .pref:last-of-type{border-bottom:0;}
+  .pref-h{display:flex;align-items:center;gap:11px;margin-bottom:4px;flex-wrap:wrap;}
+  .score{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:30px;
+    border-radius:6px;color:#fff;font-weight:800;font-size:15px;padding:0 9px;}
+  .pname{font-size:16px;font-weight:800;}
+  .pname small{font-weight:500;color:var(--muted);font-size:13px;}
+  .clar{margin-left:auto;font-size:11px;color:var(--muted);border:1px solid var(--line);
+    padding:2px 10px;border-radius:20px;white-space:nowrap;}
+  .e{background:var(--e);} .s{background:var(--s);} .t{background:var(--t);} .p{background:var(--p);}
+  .note{margin-top:30px;padding:18px 20px;background:#faf8f4;border:1px solid #ece7df;border-radius:6px;}
+  .note h3{margin:0 0 6px;font-size:14px;font-weight:800;}
+  .note p{font-size:13.5px;color:#5a5346;margin:4px 0;}
+  .foot{margin-top:30px;font-size:11.5px;color:#9a9a9a;text-align:center;}
+  @media print{
+    html,body{background:#fff;}
+    .sheet{box-shadow:none;margin:0;max-width:none;padding:24px 28px;}
+    @page{margin:14mm;}
+    .bar,.score{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .pref{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <p class="eyebrow">MBTI Form Gs · 결과 해석</p>
+  <h1>라샛별 님의 유형 — <span class="type">ENTP</span></h1>
+  <p class="lede">점수는 선호의 <em>분명한 정도</em>를 나타낼 뿐, 능력이나 우열이 아닙니다.</p>
+  <hr class="rule">
+
+  <div class="profile">
+    <div class="prow">
+      <div class="pleft on">E 외향 · 33</div>
+      <div class="track"><div class="mid"></div>
+        <div class="bar left" style="width:23.6%;background:var(--e);"></div></div>
+      <div class="pright">내향 I</div>
+    </div>
+    <div class="prow">
+      <div class="pleft">S 감각</div>
+      <div class="track"><div class="mid"></div>
+        <div class="bar right" style="width:7.9%;background:var(--s);"></div></div>
+      <div class="pright on">11 · 직관 N</div>
+    </div>
+    <div class="prow">
+      <div class="pleft on">T 사고 · 49</div>
+      <div class="track"><div class="mid"></div>
+        <div class="bar left" style="width:35.0%;background:var(--t);"></div></div>
+      <div class="pright">감정 F</div>
+    </div>
+    <div class="prow">
+      <div class="pleft">J 판단</div>
+      <div class="track"><div class="mid"></div>
+        <div class="bar right" style="width:7.9%;background:var(--p);"></div></div>
+      <div class="pright on">11 · 인식 P</div>
+    </div>
+    <p class="pcap">막대는 가운데(0)에서 더 편하게 쓰는 쪽으로 · 길수록 그 선호가 분명합니다</p>
+  </div>
+
+  <h2>ENTP — 한눈에</h2>
+  <p>ENTP는 흔히 <strong>“뜨거운 논쟁을 즐기는 변론가”</strong>로 불려요. 머리 회전이 빠르고 아이디어가 풍부하며, <strong>가능성과 연결고리를 발견해 새로운 것을 시도하는</strong> 데 강한 유형이에요. 호기심이 많고, 지적인 도전과 토론에서 에너지를 얻으며, 정해진 틀보다 유연하게 판을 새로 짜는 걸 즐깁니다.</p>
+
+  <div class="pref">
+    <div class="pref-h">
+      <span class="score e">E 33</span>
+      <span class="pname">외향 <small>Extraversion</small></span>
+      <span class="clar">분명한 선호</span>
+    </div>
+    <p>사람·아이디어·토론 같은 바깥 세계와의 교류에서 에너지를 얻는 쪽이 분명해요. 생각을 말로 꺼내며 발전시키고, 활발하게 주고받는 과정에서 더 좋은 결론에 도달하는 편입니다.</p>
+  </div>
+  <div class="pref">
+    <div class="pref-h">
+      <span class="score s">N 11</span>
+      <span class="pname">직관 <small>Intuition</small></span>
+      <span class="clar">분명한 선호</span>
+    </div>
+    <p>구체적 사실 너머의 <strong>가능성·연결·큰 그림</strong>에 자연스럽게 주의가 가요. 지금 있는 것보다 ‘이렇게도 될 수 있지 않을까’를 떠올리고, 서로 다른 것을 엮어 새로운 아이디어를 만드는 데 강합니다.</p>
+  </div>
+  <div class="pref">
+    <div class="pref-h">
+      <span class="score t">T 49</span>
+      <span class="pname">사고 <small>Thinking</small></span>
+      <span class="clar">분명 · 가장 또렷한 선호</span>
+    </div>
+    <p><strong>가장 또렷하게</strong> 나온 선호예요(감정 점수 1). 판단할 때 논리·인과·객관적 기준을 일관되게 적용하고, 아이디어든 주장이든 ‘말이 되는지’를 날카롭게 따집니다. 라샛별 님을 설명하는 단단한 축이에요.</p>
+  </div>
+  <div class="pref">
+    <div class="pref-h">
+      <span class="score p">P 11</span>
+      <span class="pname">인식 <small>Perceiving</small></span>
+      <span class="clar">분명한 선호</span>
+    </div>
+    <p>결정을 서둘러 닫기보다 <strong>선택지를 열어두고 유연하게 탐색</strong>하는 쪽이 분명해요. 새로운 정보가 들어오면 기꺼이 방향을 바꾸고, 상황에 맞춰 즉흥적으로 움직이는 방식이 잘 맞습니다. 직관(N)과 만나면 ENTP 특유의 ‘아이디어 폭발’로 이어져요.</p>
+  </div>
+
+  <h2>그래프 읽는 법 — 양쪽을 함께 반영해요</h2>
+  <p>각 줄은 한쪽 끝에 한 극, 반대쪽 끝에 다른 극이 있는 <strong>하나의 자(尺)</strong>예요. 막대는 “한쪽만 있고 반대쪽은 0”이 아니라, <strong>양쪽 점수를 함께 계산해서 나온 ‘기운 방향과 정도’</strong>입니다. 반대편 점수도 분명히 살아 있고, 그 둘을 합쳐 한 지점으로 표시한 것뿐이에요. 막대가 길수록 그 방향 선호가 더 분명하다는 뜻이지, 반대쪽이 사라졌다는 뜻이 아닙니다.</p>
+
+  <div class="note">
+    <h3>그래서 ‘참된 유형’은 직접 확인해 주세요</h3>
+    <p>라샛별 님은 네 지표 모두 박빙 없이 또렷하게 나와서(특히 사고 T), ENTP가 꽤 안정적으로 맞는 편이에요. 그래도 검사 결과는 ‘확정’이 아니라 <strong>본인이 확인할 가설</strong>이니, ENTP 설명을 읽어보고 평소 자기 모습과 잘 맞는지 직접 확인해 주세요. 직관(N)과 인식(P)은 또렷하되 사고(T)만큼 극단적이진 않으니, 그 부분이 본인 모습과 맞는지 함께 살펴보면 좋아요.</p>
+    <p>점수가 높다고 더 나은 사람도, 낮다고 부족한 것도 아니라는 점만 기억해 주세요.</p>
+  </div>
+
+  <p class="foot">MBTI® Form Gs · 정식 해석은 MBTI 전문교육 수료 전문가의 안내를 받는 것이 원칙입니다.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User & Fan Crew + PPD · MBTI 단체 분석</title>
+<style>
+ :root{--ink:#1c1c1c;--muted:#6f6f6f;--line:#e6e6e6;--accent:#2f5fa0;--paper:#fff;
+   --crew:#2f5fa0;--ppd:#c1672a;}
+ *{box-sizing:border-box;}
+ html,body{margin:0;background:#eceae6;color:var(--ink);
+   font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.65;}
+ .wrap{max-width:1000px;margin:26px auto;background:var(--paper);padding:44px 48px 40px;box-shadow:0 2px 28px rgba(0,0,0,.09);}
+ .eyebrow{font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin:0 0 8px;}
+ h1{font-size:27px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em;}
+ .sub{font-size:14px;color:var(--muted);margin:0 0 6px;}
+ .legend{font-size:12.5px;color:var(--muted);margin:10px 0 0;display:flex;gap:18px;flex-wrap:wrap;}
+ .dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:5px;}
+ hr{border:0;height:1px;background:var(--line);margin:26px 0;}
+ h2{font-size:17px;font-weight:800;margin:30px 0 14px;padding-left:12px;border-left:4px solid var(--accent);}
+ .stats{display:flex;gap:14px;margin:18px 0 0;flex-wrap:wrap;}
+ .stat{flex:1;min-width:120px;background:#faf8f4;border:1px solid #ece7df;border-radius:8px;padding:14px 16px;}
+ .stat b{display:block;font-size:24px;font-weight:800;}
+ .stat span{font-size:12.5px;color:var(--muted);}
+ /* grid */
+ .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+ .cell{border:1.5px solid var(--line);border-radius:8px;min-height:78px;padding:8px 9px;}
+ .cell.off{background:#f6f6f5;border-style:dashed;display:flex;align-items:center;justify-content:center;}
+ .cell.off .tc{color:#c4c4c4;font-weight:700;font-size:14px;}
+ .ct{display:flex;align-items:center;justify-content:space-between;}
+ .tc{font-weight:800;font-size:15px;letter-spacing:.02em;}
+ .cnt{color:#fff;font-size:11px;font-weight:800;border-radius:20px;min-width:20px;height:20px;
+   display:inline-flex;align-items:center;justify-content:center;padding:0 6px;}
+ .nms{margin-top:6px;display:flex;flex-wrap:wrap;gap:3px;}
+ .nm{font-size:11px;padding:1px 6px;border-radius:4px;white-space:nowrap;}
+ .nm.crew{background:var(--crew);color:#fff;}
+ .nm.ppd{background:#fff;color:var(--ppd);border:1px solid var(--ppd);}
+ /* dichotomy */
+ .drow{display:flex;align-items:center;gap:12px;margin:10px 0;font-size:13px;}
+ .dlab{width:74px;color:var(--muted);font-weight:600;}
+ .dlab.r{text-align:right;} .dlab.win{color:var(--ink);font-weight:800;}
+ .dbar{flex:1;height:24px;border-radius:5px;overflow:hidden;display:flex;position:relative;}
+ .seg{height:24px;} .dmid{position:absolute;left:50%;top:-3px;bottom:-3px;width:1.5px;background:#9a9a9a;}
+ table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px;}
+ th,td{text-align:center;padding:8px 6px;border-bottom:1px solid var(--line);}
+ th{font-size:11.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+ td.dk{text-align:left;font-weight:700;}
+ /* temperament */
+ .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+ .tcard{background:#fafafa;border:1px solid var(--line);border-radius:8px;padding:14px 14px 12px;}
+ .tnum{font-size:26px;font-weight:800;} .tnum small{font-size:13px;font-weight:600;}
+ .tnm{font-size:13.5px;font-weight:800;margin-top:2px;}
+ .trole{font-size:12px;color:var(--muted);margin-top:2px;}
+ .ttypes{font-size:11px;color:#888;margin-top:7px;}
+ /* insight cards */
+ .ins{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+ .icard{border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
+ .icard.work{background:#f4f7fb;border-color:#dbe6f2;}
+ .icard.bond{background:#f3f8f4;border-color:#dcebe0;}
+ .icard h3{margin:0 0 10px;font-size:15px;font-weight:800;}
+ .icard ul{margin:0;padding-left:18px;} .icard li{font-size:13px;margin:7px 0;}
+ .exp{font-size:13px;color:#555;margin:0 0 14px;}
+ .drow2{margin:16px 0;}
+ .dhead{display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#999;margin-bottom:4px;}
+ .dhead .win{color:#1c1c1c;font-weight:800;}
+ .dbar2{display:flex;height:30px;border-radius:6px;overflow:hidden;}
+ .seg2{display:flex;align-items:center;color:#fff;font-weight:800;font-size:13px;padding:0 10px;}
+ .seg2.r{justify-content:flex-end;}
+ .dsub{font-size:11.5px;color:#999;margin-top:4px;}
+ .pp2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+ .pptitle{font-size:12px;font-weight:800;letter-spacing:.04em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--line);}
+ .pprow{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #f1f1f1;}
+ .ppname{width:62px;font-size:13px;font-weight:600;flex-shrink:0;}
+ .lts{display:flex;gap:5px;}
+ .lt{display:flex;flex-direction:column;align-items:center;width:28px;}
+ .lt b{font-size:18px;line-height:1;font-weight:800;}
+ .lt b.clear{color:#1c1c1c;}
+ .lt b.soft{color:#c1672a;}
+ .lt i{font-size:9.5px;color:#aaa;font-style:normal;margin-top:2px;}
+ .note{margin-top:26px;font-size:12px;color:#9a9a9a;background:#f7f7f6;border-radius:8px;padding:14px 16px;}
+ @media print{html,body{background:#fff;}.wrap{box-shadow:none;margin:0;max-width:none;padding:18px;}@page{margin:12mm;}
+   .cell,.nm,.cnt,.seg,.seg2,.tcard,.lt b{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+ @media (max-width:680px){.ins,.tgrid,.grid{grid-template-columns:1fr 1fr;}.wrap{padding:24px;}}
+</style></head>
+<body><div class="wrap">
+ <p class="eyebrow">MBTI Form Gs · 단체 분석</p>
+ <h1>User &amp; Fan Crew + PPD 본부 · MBTI 지도</h1>
+ <p class="sub">총 23명 · 검사 결과는 우열이 아니라 서로의 소통·일하는 방식을 이해하기 위한 자료예요.</p>
+ <div class="legend">
+   <span><span class="dot" style="background:var(--crew)"></span>User &amp; Fan Crew (14명)</span>
+   <span><span class="dot" style="background:#fff;border:1px solid var(--ppd)"></span>PPD 본부 (9명)</span>
+ </div>
+
+ <div class="stats">
+   <div class="stat"><b>23</b><span>참여 인원</span></div>
+   <div class="stat"><b>12</b><span>나타난 유형 수</span></div>
+   <div class="stat"><b>ISTJ ×4</b><span>가장 많은 유형</span></div>
+   <div class="stat"><b>T 17 · S 15 · I 13</b><span>전체 우세 지표</span></div>
+ </div>
+
+ <hr>
+ <h2>16유형 지도 — 누가 어디에 있나</h2>
+ <div class="grid"><div class="cell on" style="border-color:#2f5fa0;background:rgba(47,95,160,0.06)">
+              <div class="ct"><span class="tc" style="color:#2f5fa0">ISTJ</span><span class="cnt" style="background:#2f5fa0">4</span></div>
+              <div class="nms"><span class="nm crew">박은지</span><span class="nm crew">박현민</span><span class="nm ppd">박정인</span><span class="nm ppd">지욱일</span></div></div><div class="cell on" style="border-color:#2f5fa0;background:rgba(47,95,160,0.06)">
+              <div class="ct"><span class="tc" style="color:#2f5fa0">ISFJ</span><span class="cnt" style="background:#2f5fa0">1</span></div>
+              <div class="nms"><span class="nm ppd">김민주</span></div></div><div class="cell on" style="border-color:#2e8b57;background:rgba(46,139,87,0.06)">
+              <div class="ct"><span class="tc" style="color:#2e8b57">INFJ</span><span class="cnt" style="background:#2e8b57">1</span></div>
+              <div class="nms"><span class="nm crew">이준호</span></div></div><div class="cell on" style="border-color:#7a4b8c;background:rgba(122,75,140,0.06)">
+              <div class="ct"><span class="tc" style="color:#7a4b8c">INTJ</span><span class="cnt" style="background:#7a4b8c">1</span></div>
+              <div class="nms"><span class="nm crew">이수진</span></div></div><div class="cell on" style="border-color:#c1672a;background:rgba(193,103,42,0.06)">
+              <div class="ct"><span class="tc" style="color:#c1672a">ISTP</span><span class="cnt" style="background:#c1672a">2</span></div>
+              <div class="nms"><span class="nm crew">김태혁</span><span class="nm crew">문중현</span></div></div><div class="cell on" style="border-color:#c1672a;background:rgba(193,103,42,0.06)">
+              <div class="ct"><span class="tc" style="color:#c1672a">ISFP</span><span class="cnt" style="background:#c1672a">1</span></div>
+              <div class="nms"><span class="nm crew">최명희</span></div></div><div class="cell on" style="border-color:#2e8b57;background:rgba(46,139,87,0.06)">
+              <div class="ct"><span class="tc" style="color:#2e8b57">INFP</span><span class="cnt" style="background:#2e8b57">1</span></div>
+              <div class="nms"><span class="nm ppd">전영란</span></div></div><div class="cell on" style="border-color:#7a4b8c;background:rgba(122,75,140,0.06)">
+              <div class="ct"><span class="tc" style="color:#7a4b8c">INTP</span><span class="cnt" style="background:#7a4b8c">2</span></div>
+              <div class="nms"><span class="nm crew">곽희주</span><span class="nm ppd">오가은</span></div></div><div class="cell on" style="border-color:#c1672a;background:rgba(193,103,42,0.06)">
+              <div class="ct"><span class="tc" style="color:#c1672a">ESTP</span><span class="cnt" style="background:#c1672a">3</span></div>
+              <div class="nms"><span class="nm crew">김보미</span><span class="nm crew">최서현</span><span class="nm ppd">최서임</span></div></div><div class="cell off"><span class="tc">ESFP</span></div><div class="cell off"><span class="tc">ENFP</span></div><div class="cell on" style="border-color:#7a4b8c;background:rgba(122,75,140,0.06)">
+              <div class="ct"><span class="tc" style="color:#7a4b8c">ENTP</span><span class="cnt" style="background:#7a4b8c">1</span></div>
+              <div class="nms"><span class="nm crew">라샛별</span></div></div><div class="cell on" style="border-color:#2f5fa0;background:rgba(47,95,160,0.06)">
+              <div class="ct"><span class="tc" style="color:#2f5fa0">ESTJ</span><span class="cnt" style="background:#2f5fa0">4</span></div>
+              <div class="nms"><span class="nm crew">이도연</span><span class="nm crew">하지현</span><span class="nm ppd">마지영</span><span class="nm ppd">이새얀</span></div></div><div class="cell off"><span class="tc">ESFJ</span></div><div class="cell on" style="border-color:#2e8b57;background:rgba(46,139,87,0.06)">
+              <div class="ct"><span class="tc" style="color:#2e8b57">ENFJ</span><span class="cnt" style="background:#2e8b57">2</span></div>
+              <div class="nms"><span class="nm crew">서장혁</span><span class="nm ppd">장윤정</span></div></div><div class="cell off"><span class="tc">ENTJ</span></div></div>
+
+ <hr>
+ <h2>네 가지 지표 구성 — 어느 쪽 사람이 많나</h2>
+ <p class="exp">각 지표에서 23명이 어느 쪽을 선호하는지 <b>사람 수</b>로 센 거예요. 개인 점수가 아니라 ‘인원 분포’라서 <b>만점 같은 건 없어요</b>. 막대 안의 숫자가 인원수이고, <b>인원이 많은 쪽이 진하게</b> 표시돼요. 아래 줄은 크루·본부 각각의 분포예요.</p>
+ <div class="drow2">
+      <div class="dhead"><span>외향 E</span><span class="win">I 내향</span></div>
+      <div class="dbar2">
+        <div class="seg2" style="width:43.5%;background:rgba(46,139,87,0.18);color:#6a6a6a">10</div>
+        <div class="seg2 r" style="width:56.5%;background:#2e8b57;color:#fff">13</div>
+      </div>
+      <div class="dsub">크루 6:8 · 본부 4:5</div>
+    </div><div class="drow2">
+      <div class="dhead"><span class="win">감각 S</span><span>N 직관</span></div>
+      <div class="dbar2">
+        <div class="seg2" style="width:65.2%;background:#c1672a;color:#fff">15</div>
+        <div class="seg2 r" style="width:34.8%;background:rgba(193,103,42,0.18);color:#6a6a6a">8</div>
+      </div>
+      <div class="dsub">크루 9:5 · 본부 6:3</div>
+    </div><div class="drow2">
+      <div class="dhead"><span class="win">사고 T</span><span>F 감정</span></div>
+      <div class="dbar2">
+        <div class="seg2" style="width:73.9%;background:#2f5fa0;color:#fff">17</div>
+        <div class="seg2 r" style="width:26.1%;background:rgba(47,95,160,0.18);color:#6a6a6a">6</div>
+      </div>
+      <div class="dsub">크루 11:3 · 본부 6:3</div>
+    </div><div class="drow2">
+      <div class="dhead"><span class="win">판단 J</span><span>P 인식</span></div>
+      <div class="dbar2">
+        <div class="seg2" style="width:56.5%;background:#7a4b8c;color:#fff">13</div>
+        <div class="seg2 r" style="width:43.5%;background:rgba(122,75,140,0.18);color:#6a6a6a">10</div>
+      </div>
+      <div class="dsub">크루 7:7 · 본부 6:3</div>
+    </div>
+
+ <hr>
+ <h2>기질 분포 — 본부에 다 모여 있어요</h2>
+ <div class="tgrid"><div class="tcard" style="border-top:3px solid #2f5fa0">
+      <div class="tnum" style="color:#2f5fa0">9<small>명</small></div>
+      <div class="tnm">수호자형 SJ</div>
+      <div class="trole">체계 · 실행 · 신뢰</div>
+      <div class="ttypes">ESTJ, ISFJ, ISTJ</div></div><div class="tcard" style="border-top:3px solid #7a4b8c">
+      <div class="tnum" style="color:#7a4b8c">4<small>명</small></div>
+      <div class="tnm">전략가형 NT</div>
+      <div class="trole">분석 · 전략</div>
+      <div class="ttypes">ENTP, INTJ, INTP</div></div><div class="tcard" style="border-top:3px solid #c1672a">
+      <div class="tnum" style="color:#c1672a">6<small>명</small></div>
+      <div class="tnm">장인형 SP</div>
+      <div class="trole">순발력 · 현장 대응</div>
+      <div class="ttypes">ESTP, ISFP, ISTP</div></div><div class="tcard" style="border-top:3px solid #2e8b57">
+      <div class="tnum" style="color:#2e8b57">4<small>명</small></div>
+      <div class="tnm">이상가형 NF</div>
+      <div class="trole">공감 · 의미 · 사람</div>
+      <div class="ttypes">ENFJ, INFJ, INFP</div></div></div>
+
+ <hr>
+ <h2>사람별 선호 분명도 — 대문자는 뚜렷, 소문자는 중간</h2>
+ <p class="exp">각 글자는 그 사람이 어느 쪽으로 ‘얼마나 뚜렷하게’ 나왔는지를 보여줘요. <b>대문자</b>는 분명한 선호, <b style="color:#c1672a">소문자(주황)</b>는 중간·약한 선호 — 즉 언제든 반대로 나올 수 있는 ‘유동적인 축’이에요. (아래 작은 숫자는 환산점수, 10 미만이면 소문자)</p>
+ <div class="pp2">
+   <div class="ppcol"><div class="pptitle" style="color:var(--crew)">User &amp; Fan Crew</div><div class="pprow"><span class="ppname">곽희주</span><span class="lts"><span class="lt"><b class="soft">i</b><i>1</i></span><span class="lt"><b class="soft">n</b><i>3</i></span><span class="lt"><b class="clear">T</b><i>33</i></span><span class="lt"><b class="clear">P</b><i>11</i></span></span></div><div class="pprow"><span class="ppname">김보미</span><span class="lts"><span class="lt"><b class="clear">E</b><i>25</i></span><span class="lt"><b class="clear">S</b><i>25</i></span><span class="lt"><b class="clear">T</b><i>41</i></span><span class="lt"><b class="clear">P</b><i>51</i></span></span></div><div class="pprow"><span class="ppname">김태혁</span><span class="lts"><span class="lt"><b class="soft">i</b><i>5</i></span><span class="lt"><b class="soft">s</b><i>7</i></span><span class="lt"><b class="clear">T</b><i>49</i></span><span class="lt"><b class="soft">p</b><i>9</i></span></span></div><div class="pprow"><span class="ppname">라샛별</span><span class="lts"><span class="lt"><b class="clear">E</b><i>33</i></span><span class="lt"><b class="clear">N</b><i>11</i></span><span class="lt"><b class="clear">T</b><i>49</i></span><span class="lt"><b class="clear">P</b><i>11</i></span></span></div><div class="pprow"><span class="ppname">문중현</span><span class="lts"><span class="lt"><b class="clear">I</b><i>43</i></span><span class="lt"><b class="clear">S</b><i>15</i></span><span class="lt"><b class="clear">T</b><i>41</i></span><span class="lt"><b class="clear">P</b><i>45</i></span></span></div><div class="pprow"><span class="ppname">박은지</span><span class="lts"><span class="lt"><b class="clear">I</b><i>31</i></span><span class="lt"><b class="clear">S</b><i>45</i></span><span class="lt"><b class="soft">t</b><i>1</i></span><span class="lt"><b class="soft">j</b><i>9</i></span></span></div><div class="pprow"><span class="ppname">박현민</span><span class="lts"><span class="lt"><b class="clear">I</b><i>31</i></span><span class="lt"><b class="clear">S</b><i>21</i></span><span class="lt"><b class="clear">T</b><i>65</i></span><span class="lt"><b class="clear">J</b><i>49</i></span></span></div><div class="pprow"><span class="ppname">서장혁</span><span class="lts"><span class="lt"><b class="clear">E</b><i>31</i></span><span class="lt"><b class="soft">n</b><i>7</i></span><span class="lt"><b class="soft">f</b><i>9</i></span><span class="lt"><b class="clear">J</b><i>25</i></span></span></div><div class="pprow"><span class="ppname">이도연</span><span class="lts"><span class="lt"><b class="clear">E</b><i>51</i></span><span class="lt"><b class="clear">S</b><i>23</i></span><span class="lt"><b class="soft">t</b><i>3</i></span><span class="lt"><b class="clear">J</b><i>13</i></span></span></div><div class="pprow"><span class="ppname">이수진</span><span class="lts"><span class="lt"><b class="soft">i</b><i>3</i></span><span class="lt"><b class="clear">N</b><i>13</i></span><span class="lt"><b class="clear">T</b><i>27</i></span><span class="lt"><b class="clear">J</b><i>15</i></span></span></div><div class="pprow"><span class="ppname">이준호</span><span class="lts"><span class="lt"><b class="clear">I</b><i>47</i></span><span class="lt"><b class="clear">N</b><i>21</i></span><span class="lt"><b class="clear">F</b><i>19</i></span><span class="lt"><b class="clear">J</b><i>27</i></span></span></div><div class="pprow"><span class="ppname">최명희</span><span class="lts"><span class="lt"><b class="clear">I</b><i>33</i></span><span class="lt"><b class="clear">S</b><i>29</i></span><span class="lt"><b class="soft">f</b><i>1</i></span><span class="lt"><b class="clear">P</b><i>17</i></span></span></div><div class="pprow"><span class="ppname">최서현</span><span class="lts"><span class="lt"><b class="clear">E</b><i>45</i></span><span class="lt"><b class="clear">S</b><i>63</i></span><span class="lt"><b class="soft">t</b><i>7</i></span><span class="lt"><b class="clear">P</b><i>39</i></span></span></div><div class="pprow"><span class="ppname">하지현</span><span class="lts"><span class="lt"><b class="soft">e</b><i>3</i></span><span class="lt"><b class="clear">S</b><i>33</i></span><span class="lt"><b class="clear">T</b><i>13</i></span><span class="lt"><b class="clear">J</b><i>25</i></span></span></div></div>
+   <div class="ppcol"><div class="pptitle" style="color:var(--ppd)">PPD 본부</div><div class="pprow"><span class="ppname">김민주</span><span class="lts"><span class="lt"><b class="clear">I</b><i>41</i></span><span class="lt"><b class="clear">S</b><i>23</i></span><span class="lt"><b class="soft">f</b><i>1</i></span><span class="lt"><b class="clear">J</b><i>49</i></span></span></div><div class="pprow"><span class="ppname">마지영</span><span class="lts"><span class="lt"><b class="soft">e</b><i>1</i></span><span class="lt"><b class="clear">S</b><i>23</i></span><span class="lt"><b class="clear">T</b><i>19</i></span><span class="lt"><b class="soft">j</b><i>9</i></span></span></div><div class="pprow"><span class="ppname">박정인</span><span class="lts"><span class="lt"><b class="clear">I</b><i>23</i></span><span class="lt"><b class="clear">S</b><i>51</i></span><span class="lt"><b class="clear">T</b><i>45</i></span><span class="lt"><b class="clear">J</b><i>47</i></span></span></div><div class="pprow"><span class="ppname">오가은</span><span class="lts"><span class="lt"><b class="soft">i</b><i>9</i></span><span class="lt"><b class="clear">N</b><i>11</i></span><span class="lt"><b class="soft">t</b><i>3</i></span><span class="lt"><b class="clear">P</b><i>17</i></span></span></div><div class="pprow"><span class="ppname">이새얀</span><span class="lts"><span class="lt"><b class="clear">E</b><i>21</i></span><span class="lt"><b class="clear">S</b><i>39</i></span><span class="lt"><b class="clear">T</b><i>53</i></span><span class="lt"><b class="clear">J</b><i>25</i></span></span></div><div class="pprow"><span class="ppname">장윤정</span><span class="lts"><span class="lt"><b class="clear">E</b><i>15</i></span><span class="lt"><b class="clear">N</b><i>13</i></span><span class="lt"><b class="clear">F</b><i>19</i></span><span class="lt"><b class="clear">J</b><i>13</i></span></span></div><div class="pprow"><span class="ppname">전영란</span><span class="lts"><span class="lt"><b class="clear">I</b><i>43</i></span><span class="lt"><b class="clear">N</b><i>37</i></span><span class="lt"><b class="clear">F</b><i>19</i></span><span class="lt"><b class="clear">P</b><i>49</i></span></span></div><div class="pprow"><span class="ppname">지욱일</span><span class="lts"><span class="lt"><b class="clear">I</b><i>51</i></span><span class="lt"><b class="clear">S</b><i>41</i></span><span class="lt"><b class="clear">T</b><i>29</i></span><span class="lt"><b class="clear">J</b><i>53</i></span></span></div><div class="pprow"><span class="ppname">최서임</span><span class="lts"><span class="lt"><b class="clear">E</b><i>33</i></span><span class="lt"><b class="clear">S</b><i>13</i></span><span class="lt"><b class="soft">t</b><i>7</i></span><span class="lt"><b class="clear">P</b><i>41</i></span></span></div></div>
+ </div>
+
+ <hr>
+ <h2>이 데이터로 뭘 할 수 있나</h2>
+ <p class="exp">아래 두 가지는 <b>User &amp; Fan Crew 14명 기준</b>으로 정리했어요. (본부 전체가 아니라 우리 크루에 포커스한 내용이에요.)</p>
+ <div class="ins">
+   <div class="icard work">
+     <h3>🛠️ 업무에 활용 <span style="font-weight:600;color:#7a8aa0;font-size:12px;">· 크루 기준</span></h3>
+     <ul>
+       <li><b>강점은 ‘실행과 논리’.</b> 크루가 T(11)·J(7)·S(9)로 기울어, 사실 기반의 빠른 의사결정과 꼼꼼한 실행에 강해요. 일정·체계·완수에 신뢰가 높은 크루예요.</li>
+       <li><b>역할이 자연스럽게 나뉘어요.</b> 크루 안에 전략(NT)·실행(SJ)·현장 순발력(SP)·의미와 사람(NF)이 모두 있어, 기획→실행→대응→사용자 관점까지 분담이 가능해요.</li>
+       <li><b>‘사용자 공감’ 관점은 의식적으로 챙기기.</b> 크루 14명 중 F는 3명(이준호·최명희·서장혁)뿐이고, T:F가 11:3이에요. 팬·유저 감정이 핵심인 업무 특성상, 이들을 ‘유저 입장 대변자’로 의식적으로 세우면 균형이 좋아져요.</li>
+       <li><b>내향이 다수(8/14).</b> 즉석 브레인스토밍보다 안건 사전 공유·비동기 소통이 잘 맞아요. 회의 전 자료 미리 돌리고 생각할 시간을 주면 좋은 의견이 더 나와요.</li>
+     </ul>
+   </div>
+   <div class="icard bond">
+     <h3>🤝 친해지기 <span style="font-weight:600;color:#6f9e7a;font-size:12px;">· 크루 기준</span></h3>
+     <ul>
+       <li><b>솔직·효율 소통을 환영하는 분위기.</b> T·J가 많아 돌려 말하기보다 명확한 커뮤니케이션을 편해해요. 핵심부터 말해도 잘 받아들여지는 크루예요.</li>
+       <li><b>모임은 ‘작고 차분하게’.</b> 내향이 다수라(8/14) 크고 시끌벅적한 자리보다 소규모·1:1·구조가 있는 활동에서 더 편하게 친해져요.</li>
+       <li><b>따뜻함 담당이 소수예요.</b> 크루에서 F 성향은 이준호·최명희·서장혁 세 분이에요. 결과·논리뿐 아니라 감정과 관계도 함께 챙겨주면 신뢰가 깊어져요.</li>
+       <li><b>서로 다른 결을 인정해 주기.</b> SP(현장 순발력)·NT(전략)·SJ(실행)·NF(의미)가 각자 다른 방식으로 기여해요. ‘나와 다른 방식’을 약점이 아니라 역할로 봐주면 케미가 살아나요.</li>
+     </ul>
+   </div>
+ </div>
+
+ <div class="note">※ MBTI는 ‘선호 경향’을 보는 자기이해·소통 도구예요. 사람을 한 유형으로 단정하거나 업무 능력·채용·평가의 근거로 쓰는 건 적절치 않아요.
+ 특히 박빙으로 나온 지표는 언제든 다르게 나올 수 있으니, 결과보다 ‘본인이 동의하는지’가 늘 우선이에요.</div>
+</div></body></html>
