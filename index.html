@@ -1,55 +1,114 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PPD MBTI 보고서</title>
+<title>MBTI 보고서 · 입구</title>
 <style>
- :root{--ink:#1c1c1c;--muted:#6f6f6f;--accent:#2f5fa0;}
+ :root{--ink:#1c1c1c;--muted:#6f6f6f;--line:#e6e6e6;}
  *{box-sizing:border-box;}
- html,body{margin:0;height:100%;background:#eceae6;color:var(--ink);
+ html,body{margin:0;min-height:100vh;background:#eceae6;color:var(--ink);
    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;}
- .center{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;}
- .card{background:#fff;max-width:380px;width:100%;border-radius:16px;padding:40px 34px;
-   box-shadow:0 4px 30px rgba(0,0,0,.10);text-align:center;}
- .lock{font-size:34px;margin-bottom:6px;}
- h1{font-size:19px;font-weight:800;margin:6px 0 4px;}
- p.sub{font-size:13px;color:var(--muted);margin:0 0 22px;line-height:1.5;}
- input{width:100%;padding:13px 14px;font-size:15px;border:1px solid #d8d8d8;border-radius:10px;
-   text-align:center;letter-spacing:.04em;outline:none;transition:.15s;}
- input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(47,95,160,.12);}
- button{width:100%;margin-top:12px;padding:13px;font-size:15px;font-weight:700;color:#fff;
-   background:var(--accent);border:0;border-radius:10px;cursor:pointer;transition:.15s;}
- button:hover{background:#264e85;}
- .err{color:#c0392b;font-size:13px;margin-top:12px;min-height:18px;font-weight:600;}
- .foot{font-size:11px;color:#aaa;margin-top:20px;line-height:1.5;}
+ .center{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
+ .head{text-align:center;margin-bottom:26px;}
+ .eyebrow{font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:0 0 8px;}
+ h1{font-size:24px;font-weight:800;margin:0 0 6px;}
+ .sub{font-size:13.5px;color:var(--muted);margin:0;}
+ .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px;width:100%;}
+ .card{cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;
+   box-shadow:0 2px 20px rgba(0,0,0,.07);transition:.16s;}
+ .card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.12);}
+ .card .ic{font-size:34px;}
+ .card h2{font-size:19px;font-weight:800;margin:12px 0 6px;}
+ .card p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.55;}
+ .card .cnt{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:#2f5fa0;background:#eef2f8;padding:3px 12px;border-radius:20px;}
+ .card.bno .cnt{color:#c1672a;background:#f8efe8;}
+ .foot{margin-top:26px;font-size:11.5px;color:#aaa;text-align:center;}
+ /* modal */
+ .ov{position:fixed;inset:0;background:rgba(28,28,28,.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:50;}
+ .ov.show{display:flex;}
+ .modal{background:#fff;border-radius:16px;padding:32px 30px;max-width:360px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.2);}
+ .modal .lock{font-size:30px;}
+ .modal h3{font-size:17px;font-weight:800;margin:8px 0 4px;}
+ .modal .mg{font-size:12.5px;color:var(--muted);margin:0 0 18px;}
+ .modal input{width:100%;padding:12px 14px;font-size:15px;border:1px solid #d8d8d8;border-radius:10px;text-align:center;outline:none;}
+ .modal input:focus{border-color:#2f5fa0;box-shadow:0 0 0 3px rgba(47,95,160,.12);}
+ .modal button{width:100%;margin-top:10px;padding:12px;font-size:15px;font-weight:700;color:#fff;background:#2f5fa0;border:0;border-radius:10px;cursor:pointer;}
+ .modal button:hover{background:#264e85;}
+ .modal .err{color:#c0392b;font-size:12.5px;margin-top:10px;min-height:16px;font-weight:600;}
+ .modal .cancel{margin-top:6px;background:none;color:var(--muted);font-weight:600;}
+ .modal .cancel:hover{background:none;color:#333;}
 </style></head>
 <body>
 <div class="center">
-  <div class="card">
+  <div class="head">
+    <p class="eyebrow">KRAFTON PPD · MBTI Form Gs</p>
+    <h1>어떤 분석을 보시겠어요?</h1>
+    <p class="sub">그룹을 선택하고 비밀번호를 입력해 주세요.</p>
+  </div>
+  <div class="cards">
+    <div class="card unf" data-group="unf">
+      <div class="ic">&#127775;</div>
+      <h2>UnF 크루 (PPD 본부)</h2>
+      <p>User &amp; Fan Crew 및 PPD 본부 구성원의 개인·크루·직무 분석</p>
+      <span class="cnt">검사 완료 24명</span>
+    </div>
+    <div class="card bno" data-group="bno">
+      <div class="ic">&#129513;</div>
+      <h2>Business &amp; Operation 실</h2>
+      <p>B&amp;O실 구성원의 개인·크루·협업 분석 (직무 미표기)</p>
+      <span class="cnt">검사 완료 7명</span>
+    </div>
+  </div>
+  <p class="foot">내부 공유 자료입니다 · 외부 공유를 삼가 주세요</p>
+</div>
+
+<div class="ov" id="ov">
+  <div class="modal">
     <div class="lock">&#128274;</div>
-    <h1>PPD 본부 &middot; MBTI 보고서</h1>
-    <p class="sub">내부 공유 자료예요.<br>입장 비밀번호를 입력해 주세요.</p>
-    <input id="pw" type="password" placeholder="비밀번호" autocomplete="off" autofocus />
+    <h3 id="mtitle">비밀번호</h3>
+    <p class="mg" id="mg">이 그룹의 입장 비밀번호를 입력해 주세요.</p>
+    <input id="pw" type="password" placeholder="비밀번호" autocomplete="off" />
     <button id="go">들어가기</button>
+    <button class="cancel" id="cancel">취소</button>
     <div class="err" id="err"></div>
-    <p class="foot">사내 구성원 간 참고용 자료입니다.<br>외부 공유를 삼가 주세요.</p>
   </div>
 </div>
+
 <script>
-  var TARGET = "hub.html";
-  // 비밀번호 SHA-256 해시 (원문 미포함). 기본 비번: unf2026
-  var PW_HASH = "120c04f177b0356a705428e59331d2106f2750a1fea6b9102675f8d81a19606f";
-  async function sha256(str){
-    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-    return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+  // 그룹별 비밀번호(SHA-256 해시)와 이동 대상
+  var GROUPS = {
+    unf: { title:"UnF 크루 (PPD 본부)",
+           hash:"120c04f177b0356a705428e59331d2106f2750a1fea6b9102675f8d81a19606f",
+           target:"hub.html" },       // 비번: unf2026
+    bno: { title:"Business & Operation 실",
+           hash:"6f728e9c347e40c6b430f523967a1345a077f8484072d158657dc091df3672c6",
+           target:"hub_bno.html" }     // 비번: bnobno
+  };
+  var current=null;
+  var ov=document.getElementById("ov"), pw=document.getElementById("pw"),
+      err=document.getElementById("err"), mtitle=document.getElementById("mtitle");
+  async function sha256(s){
+    var b=await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0");}).join("");
   }
-  async function check(){
-    var v = document.getElementById("pw").value.trim();
-    var err = document.getElementById("err");
+  function openModal(g){
+    current=g; err.textContent=""; pw.value="";
+    mtitle.textContent=GROUPS[g].title;
+    ov.classList.add("show"); setTimeout(function(){pw.focus();},50);
+  }
+  function closeModal(){ ov.classList.remove("show"); current=null; }
+  async function submit(){
+    if(!current) return;
+    var v=pw.value.trim();
     if(!v){ err.textContent="비밀번호를 입력해 주세요."; return; }
-    var h = await sha256(v);
-    if(h === PW_HASH){ err.textContent=""; location.href = TARGET; }
-    else { err.textContent="비밀번호가 올바르지 않아요."; document.getElementById("pw").select(); }
+    var h=await sha256(v);
+    if(h===GROUPS[current].hash){ location.href=GROUPS[current].target; }
+    else { err.textContent="비밀번호가 올바르지 않아요."; pw.select(); }
   }
-  document.getElementById("go").addEventListener("click", check);
-  document.getElementById("pw").addEventListener("keydown", function(e){ if(e.key==="Enter") check(); });
+  document.querySelectorAll(".card").forEach(function(c){
+    c.addEventListener("click", function(){ openModal(c.getAttribute("data-group")); });
+  });
+  document.getElementById("go").addEventListener("click", submit);
+  document.getElementById("cancel").addEventListener("click", closeModal);
+  pw.addEventListener("keydown", function(e){ if(e.key==="Enter") submit(); });
+  ov.addEventListener("click", function(e){ if(e.target===ov) closeModal(); });
 </script>
 </body></html>
